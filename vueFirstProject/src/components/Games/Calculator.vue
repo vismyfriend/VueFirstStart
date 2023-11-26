@@ -46,20 +46,25 @@ const startListen = () => {
 const addAudio = () => {
     numbers.value.forEach((el, i) => {
         if (el > 20 && el % 10 !== 0) {
+            //@ts-ignore
             audio.value.push(`/NumbersMp3/${Math.trunc(el / 10) * 10}.mp3`)
+            //@ts-ignore
             audio.value.push(`/NumbersMp3/${el % 10}.mp3`)
 
         } else {
+            //@ts-ignore
             audio.value.push(`/NumbersMp3/${el}.mp3`)
         }
 
         equation.value += el
 
         if (i === 3) {
+            //@ts-ignore
             audio.value.push(`/NumbersMp3/Answer${(i % 2) + 1}.mp3`)
             // equation.value += '='
 
         } else {
+            //@ts-ignore
             audio.value.push(`/NumbersMp3/${operation.value[i]}${(i % 2) + 1}.mp3`)
             switch (operation.value[i]) {
                 case "OpPlus":
