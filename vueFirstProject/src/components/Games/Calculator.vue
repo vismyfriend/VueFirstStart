@@ -120,7 +120,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <h1>Включи звук и нажми старт, когда готов</h1>
+    <h1>Прибавь звук и нажми старт, когда готов. Слушай цифры и нажимай их на калькуляторе</h1>
     <h2 :class="{ 'block': blockButtonStart }" @click="startListen" v-if="!visibleRepeat">старт</h2>
     <h2 @click="startListen" v-else>повтор</h2>
     <h2 @click="startTheGame()" v-if="visbleEquation">хочу ещё уравнение</h2>
